@@ -36,7 +36,7 @@ const nanoid = customAlphabet('1234567890abcdefghijklmnopqrstuvwxyz', 6);
 const shortenUrl = (shortId) => `http://${domain}/${shortId}`;
 
 app.use(express.json());
-
+app.use(express.static('public'));
 // Common handler for both GET and POST requests
 const handleRequest = async (req, res, handler) => {
   try {
